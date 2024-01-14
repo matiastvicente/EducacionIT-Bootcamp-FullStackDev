@@ -1,0 +1,56 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2 {
+  color: #c05497;
+}
+
+p {
+  color: #3262a6;
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 15px;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+h2 {
+  letter-spacing: 8px;
+  font-size: 22px;
+}
+
+img {
+  width: 400px;
+}
+
+#pop {
+  float: right;
+  margin-left: 15px;
+}
+
+#caribbean {
+  float: left;
+  margin-right: 15px;
+}
+
+#akingdom {
+  float: right;
+  margin-left: 15px;
+}
+
+#logo {
+  width: 30%;
+}
+
+#mouses {
+  width: 100%;
+}

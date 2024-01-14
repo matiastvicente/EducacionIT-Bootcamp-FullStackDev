@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario (3) en HTML</title>
+    <link rel="stylesheet" href="css/estilos3.css" />
+  </head>
+  <body>
+
+    <form action="https://postman-echo.com/post" method="post" target="_blank">
+
+
+        <fieldset>
+        <legend>Informacion General</legend>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <label for="direccion">direccion</label>
+        <input type="text" name="direccion" id="direccion">
+
+        </fieldset>
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label><input type="checkbox" name="arte" value="si">Arte</label>
+            <label><input type="checkbox" name="television" value="si">Television</label>
+            <label><input type="checkbox" name="videojuegos" value="si">Videojuegos</label>
+            <label><input type="checkbox" name="deportes" value="si">Deportes</label>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+
+
+        
+  </body>
+</html>

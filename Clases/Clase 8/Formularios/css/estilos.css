@@ -1,0 +1,27 @@
+label {
+  text-transform: capitalize;
+}
+
+label,
+input,
+button,
+textarea,
+select {
+  display: block;
+}
+
+input[type="radio"],
+label[for="f"],
+label[for="m"],
+label[for="o"],
+input[type="checkbox"],
+label[for^="e"] {
+  display: inline;
+}
+
+input,
+select,
+textarea,
+button {
+  margin-bottom: 20px;
+}

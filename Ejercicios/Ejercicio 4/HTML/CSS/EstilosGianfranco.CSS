@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*background-color: rgb(5, 24, 33);*/
+  background-image: url('/IMG/FondoWeb.jpg');
+  background-repeat: repeat;
+  color: white;
+  font-family: 'EB Garamond', serif;
+}
+
+#cuerpo {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+header {
+  border: rgb(248, 183, 142) 18px solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  width: 60%;
+  text-align: center;
+  margin: 40px auto;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif, sans-serif;
+  font-style: italic;
+  color: white;
+  margin: 3px;
+  font-size: 40px;
+}
+
+legend {
+  background-color: rgb(242, 98, 77);
+  text-align: left;
+  height: 40px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin: 10px;
+}
+
+fieldset {
+  background-color: rgb(210, 174, 150);
+  color: black;
+  border: rgb(164, 70, 60) 2px solid;
+  border-radius: 3px;
+  padding-bottom: 30px;
+}
+
+input,
+select {
+  color: rgb(191, 77, 60);
+  width: 70%;
+  height: 30px;
+}
+
+textarea {
+  width: 70%;
+  height: 100px;
+}
+
+br {
+  display: none;
+}
+
+input[type="radio"] {
+  height: 10px;
+}
+
+input[type="radio"],
+label[for="Fem"],
+label[for="Masc"],
+label[for="Otro"],
+input[type="checkbox"], label[class="Deporte"]{
+  display: inline;
+  height: 10px;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding: none;
+}
+
+.separador {
+  border-top: rgb(255, 115, 85) 10px double;
+  width: 50%;
+  margin: 25px auto;
+}
+
+::placeholder {
+  text-align: left;
+  color: rgb(68, 127, 157);
+}
+
+option,
+select {
+  color: rgb(12, 73, 105);
+}
+
+#Actividades, #Condiciones{
+  text-align: left;
+}
+#Actividades{
+  padding-bottom: 15px;
+}
+
+#Condiciones label, .Sedes{
+  margin-left: 0;
+  padding: 0;
+}
+
+.Botones{
+  color: rgb(189, 69, 50);
+  font-weight: bolder;
+  background-color: rgb(210, 174, 150);
+  border-radius: 3px;
+  border: rgb(242, 98, 77) 1px solid;
+  width: fit-content;
+  height: 35px;
+  padding: 8px;
+  margin: 15px;
+}
+
+.Botones:focus-within, .Botones:hover{
+  background-color: rgb(68, 127, 157);
+  color:rgb(6, 49, 71);
+  border: rgb(12, 73, 105);
+  cursor:pointer;
+}
+
+#Condiciones p{
+  color: rgb(242, 98, 77);
+  font-size: small;
+  font-weight: bold;
+}
+#Actividades p{
+  font-size: 15px;
+}
+
+fieldset:focus-within, fieldset:active{
+  background-color: rgb(68, 127, 157);
+  border-color: rgb(210, 174, 150);
+}
+
+fieldset:focus-within > legend,fieldset:active > legend {
+  background-color: rgb(6, 49, 71);
+}
+
+input:active,input:focus{
+  background-color: rgb(12, 73, 105);
+}
+
+/* No logro hacerlo funcionar con > o +
+input[type="checkbox"]:checked > label[class="Deporte"]{
+    color: rgb(242, 98, 77); 
+    font-weight: bold;
+}
+
+label[class="Deporte"] > input[type="checkbox"]:checked {
+    color: rgb(242, 98, 77); 
+    font-weight: bold;
+}
+*/

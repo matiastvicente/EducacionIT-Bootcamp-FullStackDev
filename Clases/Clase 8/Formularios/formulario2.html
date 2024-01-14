@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios en HTML</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <h2><u>Ingrese sus datos</u></h2>
+
+    <!-- https://www.w3schools.com/tags/tag_input.asp -->
+
+    <!-- <form action="" method="get"> -->
+    <!-- <form action="https://postman-echo.com/get" method="get"> -->
+    <form action="https://postman-echo.com/post" method="post">
+      <!-- ------------------------------ -->
+      <!--         Campo nombre           -->
+      <label for="nombre">Nombre</label>
+      <input
+        id="nombre"
+        type="text"
+        name="nombre"
+        placeholder="Ingrese su nombre"
+        minlength="3"
+        maxlength="10"
+        pattern="^[A-Za-z]+$"
+        required
+      />
+
+      <!-- ------------------------------ -->
+      <!--        Campo apellido          -->
+      <label for="apellido">Apellido</label>
+      <input id="apellido" type="text" name="apellido" required />
+
+      <!-- ------------------------------ -->
+      <!--          Campo edad            -->
+      <label for="edad">edad</label>
+      <input id="edad" type="number" name="edad" min="0" max="120" required />
+
+      <!-- ------------------------------ -->
+      <!--          Campo altura          -->
+      <label for="altura">altura</label>
+      <input id="altura" type="number" step="0.01" name="altura" />
+
+      <!-- ------------------------------ -->
+      <!--          Campo email           -->
+      <label for="email">email</label>
+      <input id="email" type="email" name="email" />
+
+      <!-- ------------------------------ -->
+      <!--         Campo password         -->
+      <label for="password">contraseña</label>
+      <input id="password" type="password" name="password" />
+
+      <!-- ------------------------------ -->
+      <!--          Campo género          -->
+      <label>género</label>
+      <input id="f" type="radio" name="genero" value="femenino" />
+      <label for="f">Femenino</label>
+      <input id="m" type="radio" name="genero" value="masculino" />
+      <label for="m">Masculino</label>
+      <input id="o" type="radio" name="genero" value="otros" />
+      <label for="o">Otros</label>
+
+      <!-- ------------------------------ -->
+      <!--         Campo estudios         -->
+      <label>estudios</label>
+      <input id="e1" type="checkbox" name="primaria" value="Si" checked /><label
+        for="e1"
+        >Primaria</label
+      >
+      <input id="e2" type="checkbox" name="secundaria" value="Si" /><label
+        for="e2"
+        >Secundaria</label
+      >
+      <input id="e3" type="checkbox" name="terciaria" value="Si" /><label
+        for="e3"
+        >Terciaria</label
+      >
+      <input id="e4" type="checkbox" name="cursos" value="Si" /><label for="e4"
+        >Cursos</label
+      >
+
+      <!-- ------------------------------ -->
+      <!--         Campo vehículo         -->
+      <label for="vehiculo">vehículo</label>
+      <select name="vehiculo" id="vehiculo">
+        <option value="ford">FORD</option>
+        <option value="vw">VW</option>
+        <option value="fiat">FIAT</option>
+        <option value="ninguno" selected>NINGUNO</option>
+      </select>
+
+      <!-- ------------------------------ -->
+      <!--        Campo comentarios       -->
+      <label for="comentarios">comentarios</label>
+      <textarea
+        name="comentarios"
+        id="comentarios"
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <!-- ------------------------------ -->
+      <!--           Campo fecha          -->
+      <label for="fecha">fecha</label>
+      <input id="fecha" type="date" name="fecha" />
+
+      <!-- ------------------------------ -->
+      <!--           Campo Nivel          -->
+      <label for="nivel">Nivel</label>
+      <input id="nivel" type="range" name="nivel" />
+
+      <!-- ------------------------------ -->
+      <!--           Campo color          -->
+      <label for="color">Color</label>
+      <input id="color" type="color" name="color" />
+
+      <hr />
+      <h3>Condiciones</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+        tempore dolores aperiam quod amet consequuntur rerum ipsa ducimus ullam
+        cumque! Veritatis blanditiis quam mollitia fuga labore quisquam
+        asperiores, nisi at?
+      </p>
+
+      <input type="checkbox" name="condiciones" value="acepto" /> ¿Acepta las
+      condiciones del sitio?
+
+      <!-- ------------------------------ -->
+      <!--        Botón de Envío          -->
+      <input type="submit" value="Enviar al servidor (input)" />
+
+      <!-- ------------------------------ -->
+      <!--        Botón de Envío          -->
+      <button>Enviar al servidor (button)</button>
+
+      <!-- ------------------------------ -->
+      <!--        Botón de reset          -->
+      <input type="reset" value="Limpiar" />
+
+      <!-- ------------------------------ -->
+      <!--        Botón generico          -->
+      <input type="button" value="Accion generica" />
+    </form>
+  </body>
+</html>

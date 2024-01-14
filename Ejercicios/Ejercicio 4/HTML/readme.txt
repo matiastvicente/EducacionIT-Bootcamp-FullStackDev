@@ -1,0 +1,2 @@
+Para el HTML utilizamos etiquetas <br/> simplemente para que cuando se deshabilite la hoja de estilos externa, el formulario quede dispuesto de la misma forma que el ejemplo.
+Luego, en el CSS, los deshabilitamos con la propiedad "display: none"

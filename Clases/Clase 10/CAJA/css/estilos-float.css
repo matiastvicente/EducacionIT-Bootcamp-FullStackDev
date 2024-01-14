@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+#caja-roja {
+  width: 30%;
+  height: 200px;
+  background-color: red;
+  float: right;
+}
+
+#caja-gris {
+  width: 15%;
+  background-color: grey;
+  height: 200px;
+  float: left;
+}
+
+#caja-verde {
+  width: 25%;
+  background-color: #080;
+  height: 200px;
+  float: right;
+}
+
+#caja-amarilla {
+  width: 10%;
+  background-color: #cccc00;
+  height: 200px;
+  float: left;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+p {
+  margin: 0;
+  color: brown;
+}

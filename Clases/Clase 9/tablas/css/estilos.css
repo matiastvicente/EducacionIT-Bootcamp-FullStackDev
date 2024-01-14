@@ -1,0 +1,44 @@
+* {
+  font-family: sans-serif;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#solapa-h {
+  background-color: red;
+  color: white;
+}
+
+#solapa-v {
+  background-color: purple;
+  color: white;
+}
+
+.encabezado {
+  background-color: brown;
+  color: white;
+}
+
+td {
+  background-color: cyan;
+  color: navy;
+  text-align: center;
+}
+
+.col-impar {
+  background-color: cyan;
+  color: navy;
+}
+
+.col-par {
+  background-color: green;
+  color: #fff;
+}

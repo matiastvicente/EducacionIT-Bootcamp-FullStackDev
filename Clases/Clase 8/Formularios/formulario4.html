@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios en HTML (4)</title>
+    <link rel="stylesheet" href="css/estilos4.css" />
+  </head>
+  <body>
+    <div class="contenedor-ppal">
+      <div class="titulo">
+        <p>Ingrese sus datos</p>
+      </div>
+      <form
+        action="https://postman-echo.com/post"
+        method="post"
+        target="_blank"
+      >
+        <div class="contenedor-input">
+          <label for="nombre">Ingrese el nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="contenedor-input">
+          <label for="apellido">Ingrese el apellido</label>
+          <input
+            type="text"
+            id="apellido"
+            name="apellido"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="contenedor-input">
+          <label for="edad">Ingrese la edad</label>
+          <input
+            type="number"
+            min="0"
+            id="edad"
+            name="edad"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="contenedor-input">
+          <label for="email">Ingrese el email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="contenedor-input">
+          <label for="telefono">Ingrese el telefono</label>
+          <input type="tel" id="telefono" name="telefono" autocomplete="off" />
+        </div>
+        <div class="contenedor-input">
+          <label for="password">Ingrese la password </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="contenedor-boton">
+          <input type="submit" name="boton" value="Login" />
+        </div>
+        <div class="contenedor-boton">
+        <p><input type="reset" value="Limpiar" /></p>
+      </form>
+    </div>
+  </div>
+  </body>
+</html>

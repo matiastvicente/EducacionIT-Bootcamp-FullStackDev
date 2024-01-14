@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios en HTML</title>
+    <style>
+      label {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><u>Ingrese sus datos</u></h2>
+    <br />
+    <form action="https://postman-echo.com/post" method="post">
+      <label for="nombre">Nombre</label><br />
+      <input
+        id="nombre"
+        type="text"
+        name="nombre"
+        placeholder="Ingrese su nombre"
+        minlength="3"
+        maxlength="10"
+        pattern="^[A-Za-z]+$"
+        required
+      /><br />
+
+      <label for="apellido">Apellido</label><br />
+      <input id="apellido" type="text" name="apellido" required /><br />
+
+      <label for="edad">Edad</label><br />
+      <input
+        id="edad"
+        type="number"
+        name="edad"
+        min="0"
+        max="120"
+        required
+      /><br />
+
+      <label for="altura">Altura</label><br />
+      <input id="altura" type="number" step="0.01" name="altura" /><br />
+
+      <label for="email">Email</label><br />
+      <input id="email" type="email" name="email" /><br />
+
+      <label for="password">contraseña</label><br />
+      <input id="password" type="password" name="password" /><br /><br />
+
+      <label>Genero</label><br />
+      <input id="f" type="radio" name="genero" value="femenino" checked />
+      <label for="f">Femenino</label>
+      <label>
+        <input type="radio" name="genero" value="masculino" /> Masculino
+      </label>
+      <label>
+        <input type="radio" name="genero" value="otros" /> Otros <br /><br />
+      </label>
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>

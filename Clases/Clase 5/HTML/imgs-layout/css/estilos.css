@@ -1,0 +1,43 @@
+body {
+  background-color: navy;
+  color: white;
+}
+
+h1 {
+  background-color: teal;
+  margin: 0;
+  text-align: center;
+  width: 75%;
+  margin: 40px auto;
+  font-size: 50px;
+}
+
+p {
+  font-size: 32px;
+}
+
+#contenedor-foto {
+  text-align: center;
+}
+
+#foto {
+  width: 550px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 2px;
+}
+
+section {
+  text-align: center;
+}
+
+section img {
+  border: 10px solid gold;
+  border-left: 20px dotted magenta;
+  border-bottom: 20px dashed teal;
+
+  margin: 40px;
+  margin-bottom: 200px;
+  padding: 20px;
+  padding-top: 100px;
+}

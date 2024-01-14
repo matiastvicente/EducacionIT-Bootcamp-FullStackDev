@@ -1,0 +1,23 @@
+#caja-roja {
+  width: 30%;
+  height: 200px;
+  background-color: red;
+}
+
+#caja-gris {
+  width: 15%;
+  background-color: grey;
+  height: 200px;
+}
+
+#caja-verde {
+  width: 25%;
+  background-color: #080;
+  height: 200px;
+}
+
+#caja-amarilla {
+  width: 10%;
+  background-color: #cccc00;
+  height: 200px;
+}

@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f2023;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+#cuerpo {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+header {
+  border: #4d6d63 18px solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  width: 60%;
+  text-align: center;
+  margin: 40px auto;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin: 3px;
+  font-size: 40px;
+}
+
+legend {
+  background-color: #4d6d63;
+  text-align: left;
+  height: 40px;
+  font-variant: small-caps;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin: 10px;
+}
+
+fieldset {
+  background-color: #d6e2de;
+  color: black;
+  border: #4d6d63 2px solid;
+  border-radius: 3px;
+  padding-bottom: 30px;
+}
+
+input,
+select {
+  width: 70%;
+  height: 30px;
+}
+
+textarea {
+  width: 70%;
+  height: 100px;
+}
+
+br {
+  display: none;
+}
+
+input[type="radio"] {
+  height: 10px;
+}
+
+input[type="radio"],
+label[for="Fem"],
+label[for="Masc"],
+label[for="Otro"],
+input[type="checkbox"], label[class="Deporte"]{
+  display: inline;
+  height: 10px;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding: none;
+}
+
+.separador {
+  border-top: #d6e2de 14px dotted;
+  width: 50%;
+  margin: 25px auto;
+}
+
+::placeholder {
+  text-align: right;
+  color: #89afa7;
+}
+
+option,
+select {
+  color: #4d6d63;
+}
+
+#Actividades, #Condiciones{
+  text-align: left;
+}
+#Actividades{
+  padding-bottom: 15px;
+}
+
+#Condiciones label, .Sedes{
+  margin-left: 0;
+  padding: 0;
+}
+.Botones{
+  color: rgb(170, 203, 198);
+  background-color: rgb(43, 61, 55);
+  border-radius: 3px;
+  border: rgb(77, 109, 99) 1px solid;
+  width: fit-content;
+  height: 35px;
+  padding: 8px;
+  margin: 15px;
+}
+
+.Botones:focus-within, .Botones:hover{
+  background-color: rgb(164, 190, 184);
+  color:rgb(43, 61, 55);
+  cursor:pointer;
+}
+
+#Condiciones p{
+  font-size: small;
+  font-weight: bold;
+}
+#Actividades p{
+  font-size: small;
+}
+fieldset:focus-within, fieldset:active{
+  background-color: rgb(166, 193, 185);
+}
+fieldset:focus-within > legend,fieldset:active > legend {
+  background-color: rgb(43, 61, 55);
+}
+input:active,input:focus{
+  background-color: rgb(77, 109, 99);
+}

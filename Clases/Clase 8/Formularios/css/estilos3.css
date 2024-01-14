@@ -1,0 +1,36 @@
+label[for],
+input[type="text"] {
+  display: block;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+label {
+  text-transform: capitalize;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+}
+
+fieldset {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+legend {
+  background-color: teal;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: crimson;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}

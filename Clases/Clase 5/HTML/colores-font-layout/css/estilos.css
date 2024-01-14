@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p,
+h4 {
+  margin: 0;
+}
+
+p {
+  color: red;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: lightgreen;
+  width: 100%;
+  height: 100px;
+
+  float: left;
+}
+
+nav {
+  background-color: lightsalmon;
+  width: 100%;
+  height: 75px;
+  float: left;
+}
+
+aside {
+  background-color: lightskyblue;
+  height: 450px;
+  float: left;
+}
+
+#aside1 {
+  background-color: lightskyblue;
+  width: 15%;
+  padding: 20px;
+  border: 10px solid blue;
+}
+
+#aside2 {
+  background-color: lightpink;
+  width: 10%;
+}
+
+main {
+  background-color: lightgoldenrodyellow;
+  width: 75%;
+  height: 450px;
+  float: left;
+}
+
+footer {
+  background-color: lightseagreen;
+  width: 100%;
+  height: 100px;
+  float: left;
+}
