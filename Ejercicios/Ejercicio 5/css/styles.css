@@ -1,4 +1,23 @@
+@font-face {
+  font-family: mi-fuente-body;
+  src: url("/fonts/Roboto-Regular.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: mi-fuente-titulos;
+  src: url("/fonts/Lemon-Regular.ttf");
+  font-weight: bold;
+}
+
 body {
-  color: black;
-  font-family: sans-serif;
+  font-family: "mi-fuente-body";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "mi-fuente-titulos";
+  color: #215434;
 }
