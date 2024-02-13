@@ -13,9 +13,9 @@ var numCajas = 0;
 
 function start() {
   console.log("Ejecutando: " + document.querySelector("title").innerText);
-  btn[0].onclick = gato0;
-  btn[1].onclick = gato1;
-  btn[2].onclick = gato2;
+  btn[0].onclick = function() { gato0() };
+  btn[1].onclick = function() { gato1() };
+  btn[2].onclick = function() { gato2() };
 }
 
 function gato0() {
