@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: content-box;
+}
+
+ul,
+h1,
+h3,
+p {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+header nav {
+  background-color: #48d1cc;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* header nav ul li {
+} */
+
+header nav ul li a {
+  text-decoration: none;
+  display: block;
+  width: 115px;
+  height: 54px;
+  background-color: #800080;
+  color: white;
+  text-align: center;
+  line-height: 54px;
+}
+
+header > div {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+#logo {
+  background: #ffff00;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  width: 10%;
+}
+
+#busqueda {
+  background-color: #ffd700;
+  width: 85%;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+}
+
+#boton-carrito {
+  background-color: #daa520;
+  width: 5%;
+  height: 54px;
+}
+
+#boton-carrito a {
+  text-decoration: none;
+  color: black;
+}
+
+#busqueda form label {
+  background-color: #adff2f;
+  padding: 2px;
+}
+
+#busqueda form input {
+  background-color: #ff1493;
+  padding: 2px;
+  width: 50%;
+  color: white;
+}
+
+#busqueda form input[type="submit"] {
+  background-color: #2f4f4f;
+  padding: 2px;
+  width: 60px;
+}
+
+main {
+  height: 500px;
+}
+
+footer {
+  background-color: blueviolet;
+  color: white;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 22px;
+}
