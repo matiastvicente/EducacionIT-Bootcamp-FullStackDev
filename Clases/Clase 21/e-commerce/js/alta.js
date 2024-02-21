@@ -1,9 +1,3 @@
-function start() {
-  console.warn(document.querySelector("title").innerText);
-  var refForm = document.querySelector("main form");
-  refForm.onsubmit = agregar;
-}
-
 function agregar(e) {
   e.preventDefault();
   console.log("agregar()");
@@ -41,6 +35,8 @@ function agregar(e) {
 
   productos.push(producto);
 
+  representarTablaProductos();
+
   refNombre.value = "";
   refPrecio.value = "";
   refStock.value = "";
@@ -49,4 +45,39 @@ function agregar(e) {
   refDetalles.value = "";
   refFoto.value = "";
   refEnvio.checked = false;
+}
+
+function representarTablaProductos() {
+  var filasTabla =
+    "<tr>" +
+    "<th>nombre</th>" +
+    "<th>precio</th>" +
+    "<th>stock</th>" +
+    "<th>marca</th>" +
+    "<th>detalles</th>" +
+    "<th>foto</th>" +
+    "<th>envío</th>" +
+    "</tr>";
+
+  for (let i = 0; i < productos.length; i++) {
+    filasTabla +=
+      "<tr>" +
+      "<td>"+ productos[i].nombre + "</td>" +
+      "<td>"+ productos[i].precio + "</td>" +
+      "<td>"+ productos[i].stock + "</td>" +
+      "<td>"+ productos[i].marca + "</td>" +
+      "<td>"+ productos[i].detalles + "</td>" +
+      "<td><img width=75 src='"+ productos[i].foto + "'></td>" +
+      "<td>"+ (productos[i].envio? 'Si' : 'No') + "</td>" +
+      "</tr>";
+  }
+
+  document.querySelector("table").innerHTML = filasTabla;
+}
+
+function start() {
+  console.warn(document.querySelector("title").innerText);
+  var refForm = document.querySelector("main form");
+  refForm.onsubmit = agregar;
+  representarTablaProductos();
 }
