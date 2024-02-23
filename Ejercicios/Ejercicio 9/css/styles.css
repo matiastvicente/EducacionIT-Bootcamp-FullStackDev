@@ -1,0 +1,66 @@
+@font-face {
+  font-family: Calculator;
+  src: url("../fonts/Calculator.ttf");
+}
+
+#pantalla {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 60px;
+  height: 75px;
+  line-height: 75px;
+  display: flex;
+  justify-content: end;
+  background-color: #7a9286;
+  font-family: "Calculator";
+}
+
+main {
+  margin: auto;
+  margin-top: 100px;
+  width: 400px;
+  height: 500px;
+  box-sizing: border-box;
+}
+
+#teclas {
+  color: white;
+  font-size: 35px;
+  margin-top: 8px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+  flex-wrap: wrap;
+}
+
+#teclas div {
+  text-align: center;
+  line-height: 97px;
+  background-color: black;
+  height: 98px;
+  width: 98px;
+  border-radius: 5px;
+}
+
+#teclas div:hover {
+  background-color: rgba(0, 0, 0, 0.95);
+  cursor: pointer;
+}
+
+#teclas div:active {
+  background-color: rgba(4, 31, 1, 0.885);
+  cursor: pointer;
+}
+
+#pantalla:hover {
+  background-color: #7a9286f0;
+  cursor: pointer;
+}
+
+#pantalla:active {
+  background-color: #7a9286e0;
+  cursor: pointer;
+  color: #7a9286e0;
+}
