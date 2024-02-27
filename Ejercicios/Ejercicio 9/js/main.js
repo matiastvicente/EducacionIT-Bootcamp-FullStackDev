@@ -1,142 +1,100 @@
-var buttons = document.querySelectorAll("#teclas div");
-var screen = document.getElementById("pantalla");
-var btn7 = buttons[0];
-var btn8 = buttons[1];
-var btn9 = buttons[2];
-var btnMas = buttons[3];
-var btn4 = buttons[4];
-var btn5 = buttons[5];
-var btn6 = buttons[6];
-var btnMenos = buttons[7];
-var btn1 = buttons[8];
-var btn2 = buttons[9];
-var btn3 = buttons[10];
-var btnPor = buttons[11];
-var btnPunto = buttons[12];
-var btn0 = buttons[13];
-var btnIgual = buttons[14];
-var btnDiv = buttons[15];
-var memoria = [];
-var valor = [];
-var i = 0;
-var resultado = 0;
-var symbol;
+var buffer = [];
+var cuenta = "";
+var pantalla = document.getElementById("pantalla");
+var j = 0;
 
-function botonesPresionados() {
-  btn7.onclick = function () {
-    click(btn7);
-  };
-  btn8.onclick = function () {
-    click(btn8);
-  };
-  btn9.onclick = function () {
-    click(btn9);
-  };
-  btn4.onclick = function () {
-    click(btn4);
-  };
-  btn5.onclick = function () {
-    click(btn5);
-  };
-  btn6.onclick = function () {
-    click(btn6);
-  };
-  btn1.onclick = function () {
-    click(btn1);
-  };
-  btn2.onclick = function () {
-    click(btn2);
-  };
-  btn3.onclick = function () {
-    click(btn3);
-  };
-  btn0.onclick = function () {
-    click(btn0);
-  };
+const click = (num) => {
+  if (String(eval(cuenta)).split("").length < 13) {
+    if (buffer.length < 13) {
+      buffer.push(num);
+      if (pantalla.innerText == 0 || j == 1) {
+        pantalla.innerText = buffer.join("");
+        j = 0;
+      } else pantalla.innerText += num;
+      cuenta = buffer.join("");
+      console.log(cuenta);
+    }
+  } else pantalla.innerText = "Error";
+};
 
-  screen.onclick = function () {
-    memoria = [];
-    valor = [];
-    resultado = 0;
-    document.getElementById("pantalla").innerText = 0;
-  };
-
-  btnMas.onclick = clickMas;
-  btnIgual.onclick = clickIgual;
-
-  btnDiv.onclick = function () {
-    click(btnDiv);
-  };
-  btnPunto.onclick = function () {
-    clickSymbol(btnPunto);
-  };
-  btnPor.onclick = function () {
-    clickSymbol(btnPor);
-  };
-  btnMenos.onclick = function () {
-    clickSymbol(btnMenos);
-  };
-}
-
-function click(element) {
-  if (memoria.length < 13) {
-    memoria.push(element.innerText);
-    document.getElementById("pantalla").innerText = memoria.join("");
+const symbol = (sym) => {
+  j = 0;
+  buffer.push(sym);
+  if (sym == "=") {
+    console.log(eval(cuenta));
+    if (String(eval(cuenta)).split("").length < 13)
+      pantalla.innerText = eval(cuenta);
+    else pantalla.innerText = "Error";
+    cuenta = eval(cuenta);
+    buffer = [];
+    buffer.push(cuenta);
   }
-  valor[i] = +memoria.join("");
-  console.log(valor);
-  /*   console.log("valor:  " + valor[i]); */
-}
 
-function clickMas() {
-  resultado += valor[i];
-  memoria = [];
-  symbol = "+";
-}
-
-function clickIgual() {
-  switch (symbol) {
-    case "+":
-      clickMas();
-      break;
-
-    default:
-      break;
+  if (sym == ".") {
+    if (buffer.length < 13) {
+      if (pantalla.innerText != 0) {
+        pantalla.innerText = buffer.join("");
+      }
+    }
   }
-  document.getElementById("pantalla").innerText = resultado;
-}
+  j = 1;
+};
 
-/* function clickSymbol(element) {
-  switch (element) {
-    case btnMas:
-      console.log("MAS");
-      memoria = [];
-      resultado += valor[i];
-      i++;
-      break;
-
-    case btnMenos:
-      console.log("MENOS");
-      break;
-
-    case btnPor:
-      console.log("POR");
-      break;
-
-    case btnDiv:
-      console.log("DIV");
-      break;
-
-    case btnIgual:
-      console.log("IGUAL");
-      document.getElementById("pantalla").innerText = resultado;
-
-      break;
-
-    default:
-      break;
-  }
-} */
+const botonesPresionados = () => {
+  document.getElementById("1").onclick = () => {
+    click(1);
+  };
+  document.getElementById("2").onclick = () => {
+    click(2);
+  };
+  document.getElementById("3").onclick = () => {
+    click(3);
+  };
+  document.getElementById("4").onclick = () => {
+    click(4);
+  };
+  document.getElementById("5").onclick = () => {
+    click(5);
+  };
+  document.getElementById("6").onclick = () => {
+    click(6);
+  };
+  document.getElementById("7").onclick = () => {
+    click(7);
+  };
+  document.getElementById("8").onclick = () => {
+    click(8);
+  };
+  document.getElementById("9").onclick = () => {
+    click(9);
+  };
+  document.getElementById("0").onclick = () => {
+    click(0);
+  };
+  document.getElementById("+").onclick = () => {
+    symbol("+");
+  };
+  document.getElementById("-").onclick = () => {
+    symbol("-");
+  };
+  document.getElementById("x").onclick = () => {
+    symbol("*");
+  };
+  document.getElementById("/").onclick = () => {
+    symbol("/");
+  };
+  document.getElementById("=").onclick = () => {
+    symbol("=");
+  };
+  document.getElementById(".").onclick = () => {
+    symbol(".");
+  };
+  document.getElementById("pantalla").onclick = () => {
+    buffer = [];
+    pantalla.innerText = 0;
+    cuenta = "";
+  };
+};
 
 function start() {
   console.log(document.querySelector("title").innerText);
