@@ -1,0 +1,84 @@
+@font-face {
+  font-family: Calculator;
+  src: url("../fonts/Calculator.ttf");
+}
+
+body {
+  background-image: url("https://png.pngtree.com/background/20211215/original/pngtree-cartoon-satellite-ruler-calculator-linear-education-background-picture-image_1458755.jpg");
+}
+
+main {
+  margin: auto;
+  margin-top: 100px;
+  width: 400px;
+  height: 500px;
+  box-sizing: border-box;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#pantalla {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 60px;
+  height: 75px;
+  line-height: 75px;
+  display: flex;
+  justify-content: end;
+  background-color: #7a9286;
+  font-family: "Calculator";
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  box-shadow: 5px 5px 8px rgb(6, 78, 69);
+  text-shadow: 2px 2px 5px rgb(199, 199, 199);
+}
+
+.teclas {
+  font-family: sans-serif;
+  color: rgb(48, 48, 48);
+  font-size: 35px;
+  margin-top: 3px;
+  text-align: center;
+  line-height: 98px;
+  border: 1px solid black;
+  background: rgb(208, 221, 85);
+  background: linear-gradient(
+    67deg,
+    rgba(208, 221, 85, 1) 0%,
+    rgba(232, 192, 58, 1) 35%,
+    rgba(255, 98, 0, 1) 100%
+  );
+  height: 98px;
+  width: 98px;
+  border-radius: 5px;
+  margin: 2px;
+  box-shadow: 5px 5px 8px rgb(138, 34, 16);
+  text-shadow: 2px 2px 5px rgb(199, 199, 199);
+}
+
+.teclas:hover {
+  background-color: rgba(0, 0, 0, 0.95);
+  cursor: pointer;
+}
+
+.teclas:active {
+  background-color: rgba(4, 31, 1, 0.885);
+  cursor: pointer;
+}
+
+#pantalla:hover {
+  background-color: #7a9286f0;
+  cursor: pointer;
+}
+
+#pantalla:active {
+  background-color: #7a9286e0;
+  cursor: pointer;
+  color: #7a9286e0;
+}
