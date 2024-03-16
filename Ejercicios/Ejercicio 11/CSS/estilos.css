@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(76, 123, 157);
+  color: rgb(31, 49, 82);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-image: url("../IMG/ciudad.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+}
+
+h1 {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(223, 52, 72);
+  color: rgb(241, 250, 238);
+  font-family: 'Lobster', cursive;
+  text-shadow: 1px 1px 4px black;
+}
+
+body > div {
+  width: 80%;
+  margin: auto;
+  justify-content: start;
+  padding: 3%;
+  margin-top: 22px;
+  margin-bottom: 300px;
+  border-radius: 10px;
+  background-color: rgb(172, 218, 220);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.556);
+}
+
+p::first-letter {
+  font-size: 200%;
+  font-family: 'Lobster', cursive;
+}
+
+div > div :nth-child(1) {
+  color: rgb(224, 50, 72);
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.314);
+}
+div > div :nth-child(2) {
+  text-align: center;
+}
+
+div > div :nth-child(2)::before {
+  content: " -";
+}
+div > div :nth-child(2)::after {
+  content: "-";
+}
+div > div :nth-child(2)::first-letter {
+  font-size: 100%;
+}
+
+div:nth-child(3) {
+  height: 280px;
+  width: 100%;
+  margin-bottom: -260px;
+  background-image: url(../IMG/gato.png);
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  overflow: visible;
+}
