@@ -1,3 +1,124 @@
 body {
-  background-color: rgb(196, 196, 196);
-}/*# sourceMappingURL=styles.css.map */
+  background-color: #ffffff;
+  font-family: sans-serif;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: content-box;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo > img {
+  width: 65px;
+  margin: 5px;
+  margin-left: 10px;
+}
+
+ul,
+h1,
+h3,
+p {
+  margin: 0;
+}
+
+header {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav {
+  width: 30%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+/* header nav ul li {
+} */
+
+header nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  color: black;
+  text-align: center;
+}
+
+header > div {
+  display: flex;
+  width: 700px;
+  line-height: 70px;
+  justify-content: start;
+  align-items: start;
+}
+
+#busqueda {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+#busqueda img {
+  opacity: 50%;
+  padding: 5px;
+  margin: 5px;
+}
+
+#boton-carrito {
+  display: none;
+}
+
+#busqueda form {
+  display: flex;
+  align-items: center;
+}
+
+#busqueda form label {
+  padding: 2px;
+}
+
+form a {
+  height: 40px;
+}
+
+#busqueda form input {
+  padding: 2px;
+  margin-left: 10px;
+  width: 500px;
+  color: white;
+}
+
+#busqueda form input[type="submit"] {
+  background-color: #4e4e4e;
+  padding: 2px;
+  margin: 5px;
+  width: 60px;
+}
+
+main {
+  height: 700px;
+}
+
+footer {
+  background-color: blueviolet;
+  color: white;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 22px;
+}
