@@ -4,14 +4,16 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Los Rollos Hermanos - Nosotros</title>
-    <link rel="icon" type="image/svg" href="https://cdn-icons-png.flaticon.com/512/1678/1678282.png">
-    <link rel='stylesheet' href='css/styles.css'>
+    <title>Los Rollos Hermanos - Articulos de Limpieza</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1678/1678282.png">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/inicio.css">
 </head>
 
 <body>
     <header>
         <nav>
+            <div id="logo"><img src="img/Isologo.png" alt="Logo"></div>
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./alta.html">Alta</a></li>
@@ -20,23 +22,36 @@
             </ul>
         </nav>
         <div>
-            <div id="logo"><img src="img/Logo.png" alt="Logo"></div>
             <div id="busqueda">
                 <form action="#">
                     <label>Buscar</label>
-                    <input type="text" /><input type="Submit" value="Buscar" />
+                    <input type="text" /><a href="#"><img
+                            src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png" alt="lupa"
+                            height="20px"></a>
                 </form>
             </div>
-            <div id="boton-carrito">C</div>
+            <div id="boton-carrito"><a href="/carrito.html">C</a></div>
         </div>
     </header>
 
     <main></main>
 
     <footer>
-        <h3>&copy;Copyright 2024</h3>
+        <div class="rounded-social-buttons">
+            <a class="social-button facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-button twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-button linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="social-button youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="social-button instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+        </script>
+
+    <script src="js/nosotros.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

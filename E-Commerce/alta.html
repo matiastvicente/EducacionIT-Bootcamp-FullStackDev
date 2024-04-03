@@ -4,14 +4,16 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Los Rollos Hermanos - Alta de productos</title>
-    <link rel="icon" type="image/svg" href="https://cdn-icons-png.flaticon.com/512/1678/1678282.png">
-    <link rel='stylesheet' href='css/styles.css'>
+    <title>Los Rollos Hermanos - Articulos de Limpieza</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1678/1678282.png">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/alta.css">
 </head>
 
 <body>
     <header>
         <nav>
+            <div id="logo"><img src="img/Isologo.png" alt="Logo"></div>
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./alta.html">Alta</a></li>
@@ -20,16 +22,18 @@
             </ul>
         </nav>
         <div>
-            <div id="logo"><img src="img/Logo.png" alt="Logo"></div>
             <div id="busqueda">
                 <form action="#">
                     <label>Buscar</label>
-                    <input type="text" /><input type="Submit" value="Buscar" />
+                    <input type="text" /><a href="#"><img
+                            src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png" alt="lupa"
+                            height="20px"></a>
                 </form>
             </div>
-            <div id="boton-carrito">C</div>
+            <div id="boton-carrito"><a href="/carrito.html">C</a></div>
         </div>
     </header>
+
 
     <main>
         <h1>Alta de productos</h1>
@@ -37,62 +41,96 @@
         <form class="alta-form">
             <div class="input-group">
                 <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" name="nombre" />
+                <input id="nombre" type="text" name="nombre" required />
                 <div class="cerror-details"></div>
             </div>
 
             <div class="input-group">
                 <label for="precio">Precio</label>
-                <input id="precio" type="number" step="0.00" name="precio" />
+                <input id="precio" type="number" step="0.00" name="precio" min=0 required />
                 <div class="cerror-details"></div>
             </div>
 
             <div class="input-group">
                 <label for="stock">Stock</label>
-                <input id="stock" type="number" name="stock" />
+                <input id="stock" type="number" name="stock" min=0 required />
                 <div class="cerror-details"></div>
             </div>
 
-            <div id="prueba " class="input-group">
+            <div class="input-group">
                 <label for="marca">marca</label>
-                <input id="marca" type="text" name="marca" />
+                <input id="marca" type="text" name="marca" required />
                 <div class="cerror-details"></div>
             </div>
 
             <div class="input-group">
                 <label for="categoria">categoria</label>
-                <input id="categoria" type="text" name="categoria" />
+                <input id="categoria" type="text" name="categoria" required />
                 <div class="cerror-details"></div>
             </div>
 
             <div class="input-group">
-                <label for="detalles">detalles</label>
-                <input id="detalles" type="text" name="detalles" />
+                <label for="desc-corta">descripción corta</label>
+                <input id="desc-corta" type="text" name="desc-corta" required />
+                <div class="cerror-details"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="desc-larga">descripción larga</label>
+                <input id="desc-larga" type="text" name="desc-larga" required />
+                <div class="cerror-details"></div>
+            </div>
+
+
+            <div class="input-group">
+                <label for="edad-desde">edad desde</label>
+                <input id="edad-desde" type="number" name="edad-desde" min=0 />
+                <div class="cerror-details"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="edad-hasta">edad hasta</label>
+                <input id="edad-hasta" type="number" name="edad-hasta" min=0 />
                 <div class="cerror-details"></div>
             </div>
 
             <div class="input-group">
                 <label for="foto">foto</label>
-                <input id="foto" type="text" name="foto" />
+                <input id="foto" type="text" name="foto" required />
                 <div class="cerror-details"></div>
             </div>
 
             <div class="input-group">
                 <input id="envio" type="checkbox" name="envio" />
-                <label for="envio">envio</label>
+                <label for="envio">envío sin cargo</label>
             </div>
 
             <button>Agregar</button>
         </form>
 
-        <hr />
+        <!--         <hr />
         <h2>Lista de productos disponibles</h2>
-        <table></table>
+        <table></table> -->
+
+
     </main>
+
     <footer>
-        <h3>&copy;Copyright 2024</h3>
+        <div class="rounded-social-buttons">
+            <a class="social-button facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-button twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-button linkedin" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="social-button youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="social-button instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+        </script>
+
+    <script src="js/alta.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

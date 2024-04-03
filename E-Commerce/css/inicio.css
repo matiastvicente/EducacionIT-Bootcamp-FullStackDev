@@ -69,6 +69,10 @@ section:hover {
   animation: resize 0.3s ease-in-out forwards;
 }
 /* Aplica la animación */
-img:hover {
+section img:hover {
   animation: rotateImage 0.5s ease-in-out; /* Duración de 1 segundo */
+}
+
+#busqueda img:hover {
+  opacity: 70%;
 }

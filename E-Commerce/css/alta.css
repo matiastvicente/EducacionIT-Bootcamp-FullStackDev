@@ -1,0 +1,65 @@
+main {
+  padding: 20px;
+  height: auto;
+}
+
+main h1 {
+  text-align: center;
+}
+
+main .alta-form {
+  background-color: rgb(236, 236, 236);
+  width: 80%;
+  margin: 20px auto;
+  padding: 30px;
+  color: white;
+  border-radius: 20px;
+}
+
+main .input-group {
+  text-align: center;
+  padding: 3px;
+}
+
+main label {
+  color: black;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 5px;
+}
+
+main label[for="envio"] {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+main form button {
+  margin: 15px auto;
+  display: block;
+  height: 35px;
+  width: 40%;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #e6e6e6;
+}
+
+main input {
+  width: 70%;
+  height: 30px;
+  border-radius: 5px;
+}
+
+main input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+form div:last-of-type {
+  margin-top: 8px;
+}
+
+button:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
