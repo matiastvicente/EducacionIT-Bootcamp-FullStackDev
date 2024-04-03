@@ -21,6 +21,7 @@ main section {
   margin: 25px;
   border-radius: 5px;
   border: 2px solid rgb(243, 243, 243);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.137);
 }
 
 main section h3 {
@@ -71,8 +72,4 @@ section:hover {
 /* Aplica la animación */
 section img:hover {
   animation: rotateImage 0.5s ease-in-out; /* Duración de 1 segundo */
-}
-
-#busqueda img:hover {
-  opacity: 70%;
 }

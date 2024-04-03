@@ -7,7 +7,7 @@
     <title>Los Rollos Hermanos - Articulos de Limpieza</title>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1678/1678282.png">
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 
 <body>
@@ -34,7 +34,39 @@
         </div>
     </header>
 
-    <main></main>
+    <main>
+        <h1>Contacto</h1>
+
+        <form class="alta-form">
+            <div class="input-group">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" name="nombre" required />
+                <div class="cerror-details"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">email</label>
+                <input id="email" type="email" name="email" required />
+                <div class="cerror-details"></div>
+            </div>
+
+            <div class="input-group">
+
+                <label for="comentarios">comentarios</label>
+                <textarea name="comentarios" id="comentarios" cols="10" rows="5"></textarea>
+
+            </div>
+
+            <div class="input-group">
+                <label for="edad">edad</label>
+                <input id="edad" type="number" name="edad" min=18 max=99 />
+                <div class="cerror-details"></div>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+    </main>
 
     <footer>
         <div class="rounded-social-buttons">

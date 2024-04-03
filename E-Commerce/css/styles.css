@@ -34,7 +34,6 @@ header {
 }
 
 header nav {
-  width: 30%;
   height: 70px;
   display: flex;
   align-items: center;
@@ -59,7 +58,6 @@ header nav ul li a {
 
 header > div {
   display: flex;
-  width: 700px;
   line-height: 70px;
   justify-content: start;
   align-items: start;
@@ -110,6 +108,10 @@ form a {
 
 main {
   height: 700px;
+}
+
+#busqueda img:hover {
+  opacity: 70%;
 }
 
 /* ESTILOS FOOTER */
@@ -221,4 +223,23 @@ footer {
   color: #125688;
   background: #fefefe;
   border-color: #125688;
+}
+
+@media (max-width: 1080px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #busqueda {
+    justify-content: center;
+  }
+
+  #busqueda form input {
+    width: 90%;
+  }
+
+  nav {
+    margin: auto;
+  }
 }

@@ -28,11 +28,6 @@ main label {
   margin-bottom: 5px;
 }
 
-main label[for="envio"] {
-  display: inline-block;
-  margin: 10px 0;
-}
-
 main form button {
   margin: 15px auto;
   display: block;
@@ -47,6 +42,14 @@ main form button {
 main input {
   width: 70%;
   height: 30px;
+}
+
+main textarea {
+  width: 70%;
+  height: 50px;
+  max-width: 70%;
+  max-height: 50px;
+  min-height: 30px;
 }
 
 main input[type="checkbox"] {

@@ -1,0 +1,33 @@
+main {
+  display: flex;
+}
+
+.nosotros-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 10px;
+  width: 80%;
+  margin-bottom: -300px;
+  height: 10%;
+}
+
+.oficinas-container {
+  width: 82%;
+  display: flex;
+  justify-content: center;
+}
+
+.oficina {
+  margin: 0 10px;
+}
+
+.oficina img {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
