@@ -37,3 +37,17 @@ main .section-cards-header h1 {
   color: white;
   margin-bottom: 20px;
 }
+
+@keyframes rotateImage {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(10deg);
+  }
+}
+
+/* Aplica la animación */
+img:hover {
+  animation: rotateImage 3s ease-in-out; /* Duración de 1 segundo */
+}

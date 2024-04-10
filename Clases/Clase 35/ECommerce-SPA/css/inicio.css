@@ -1,0 +1,45 @@
+.inicio {
+    height: auto;
+    background-color: #689;
+    padding: 25px;
+    text-align: center;
+}
+
+.inicio .section-cards-container {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
+
+.inicio section img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.inicio section {
+    border: 1px  dashed yellow;
+    width: 350px;
+    padding: 15px;
+    background-color:#943;
+    color: white;
+    margin: 25px;
+    border-radius: 15px;
+}
+
+.inicio section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: rgba(255,255,255,0.7)
+}
+
+.inicio .section-cards-header h1 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+.inicio .section-cards-container p {
+    /* text-align: left; */
+}
