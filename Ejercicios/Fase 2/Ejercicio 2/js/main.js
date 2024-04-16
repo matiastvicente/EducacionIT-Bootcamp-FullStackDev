@@ -4,38 +4,26 @@ var p = document.querySelector("p");
 var cb = document.querySelector("#update");
 var update = document.querySelector("label:last-of-type");
 var valorUSD = 0;
+var myInterval;
+var flag = 0;
 
 function start() {
   dolar.addEventListener("input", () => {
     valorUSD = dolar.value;
-    if (valorUSD == 0 || peso.value == 0) {
-      p.innerText = "Valor convertido en USD";
-    } else {
-      let result = peso.value / valorUSD;
-      p.innerText = "Valor convertido en USD $" + result.toFixed(2);
-    }
+    conversion();
   });
-  peso.addEventListener("input", () => {
-    if (valorUSD == 0 || peso.value == 0) return;
-    else {
-      let result = peso.value / valorUSD;
-      p.innerText = "Valor convertido en USD $" + result.toFixed(2);
-    }
-  });
+
+  peso.addEventListener("input", conversion);
+
   cb.addEventListener("input", () => {
-    convertirAuto();
-    if (valorUSD == 0 || peso.value == 0) return;
-    else {
-      let result = peso.value / valorUSD;
-      p.innerText = "Valor convertido en USD $" + result.toFixed(2);
+    mostrarTiempo();
+    if (flag == 0) {
+      myInterval = setInterval(convertirAuto, 2000);
+      flag = 1;
+    } else {
+      clearInterval(myInterval);
+      flag = 0;
     }
-    dolar.value = valorUSD;
-    let dateDate = new Date().toLocaleDateString();
-    let dateTime = new Date().toLocaleTimeString();
-    if (update.innerText == "") {
-      update.innerText = "  " + dateDate + " " + dateTime;
-    } else update.innerText = "";
-    update.style.fontWeight = "bold";
   });
 }
 
@@ -46,10 +34,26 @@ function convertirAuto() {
   xhr.addEventListener("load", () => {
     if (xhr.status == 200) {
       let respuesta = JSON.parse(xhr.response);
-      valorUSD = respuesta.blue.value_sell;
+      dolar.value = respuesta.blue.value_sell;
     }
   });
   xhr.send();
+}
+
+function mostrarTiempo() {
+  let dateDate = new Date().toLocaleDateString();
+  let dateTime = new Date().toLocaleTimeString();
+  if (update.innerText == "") {
+    update.innerText = "  " + dateDate + " " + dateTime;
+  } else update.innerText = "";
+  update.style.fontWeight = "bold";
+}
+
+function conversion() {
+  let result = peso.value / valorUSD;
+  if (isFinite(result))
+    p.innerText = "Valor convertido en USD $" + result.toFixed(2);
+  else p.innerText = "Valor convertido en USD $";
 }
 
 window.onload = start;
