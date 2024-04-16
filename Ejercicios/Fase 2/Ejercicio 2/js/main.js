@@ -40,11 +40,6 @@ function convertirAuto() {
       convertirValores();
     }
   });
-
-  /*  Este timer lo agregué porque a veces la informacion de la consulta tardaba unos 
-  milisegundos extra por ende no se podia realizar la operacion de division dentro de la funcion 'convertirValores' con
-  el valor obtenido por la api. */
-
   xhr.send();
 }
 
