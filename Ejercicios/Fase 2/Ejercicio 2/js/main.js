@@ -3,6 +3,7 @@ var dolar = document.querySelector("#dolar");
 var p = document.querySelector("p");
 var cb = document.querySelector("#update");
 var update = document.querySelector("label:last-of-type");
+var result;
 var valorUSD = 0;
 var myInterval;
 var flag = 0;
@@ -10,10 +11,10 @@ var flag = 0;
 function start() {
   dolar.addEventListener("input", () => {
     valorUSD = dolar.value;
-    conversion();
+    convertirValores();
   });
 
-  peso.addEventListener("input", conversion);
+  peso.addEventListener("input", convertirValores);
 
   cb.addEventListener("input", () => {
     mostrarTiempo();
@@ -35,8 +36,15 @@ function convertirAuto() {
     if (xhr.status == 200) {
       let respuesta = JSON.parse(xhr.response);
       dolar.value = respuesta.blue.value_sell;
+      valorUSD = dolar.value;
+      convertirValores();
     }
   });
+
+  /*  Este timer lo agregué porque a veces la informacion de la consulta tardaba unos 
+  milisegundos extra por ende no se podia realizar la operacion de division dentro de la funcion 'convertirValores' con
+  el valor obtenido por la api. */
+
   xhr.send();
 }
 
@@ -49,8 +57,8 @@ function mostrarTiempo() {
   update.style.fontWeight = "bold";
 }
 
-function conversion() {
-  let result = peso.value / valorUSD;
+function convertirValores() {
+  result = peso.value / valorUSD;
   if (isFinite(result))
     p.innerText = "Valor convertido en USD $" + result.toFixed(2);
   else p.innerText = "Valor convertido en USD $";
