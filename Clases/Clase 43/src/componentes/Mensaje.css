@@ -1,0 +1,8 @@
+.Mensaje .jumbotron {
+    background-color: teal;
+    color: white;
+}
+
+.Mensaje hr {
+    background-color: #ddd;
+}
